@@ -7,6 +7,7 @@
 //
 
 #import "EventsTableViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface EventsTableViewController ()
 
@@ -22,6 +23,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.refreshControl beginRefreshing];
+    [self refresh: self.refreshControl];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,29 +33,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)refresh:(id)sender {
+    AVQuery *query = [AVQuery queryWithClassName:@"Event"];
+    [query orderByDescending:@"createdAt"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            self.events = [NSMutableArray arrayWithArray:objects];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        
+        [sender endRefreshing];
+    }];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.events.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EventTableCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    AVObject* event = [self.events objectAtIndex:indexPath.row];
     
+    cell.textLabel.text = [event valueForKey:@"title"];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
