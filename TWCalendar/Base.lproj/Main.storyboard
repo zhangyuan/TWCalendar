@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -50,6 +51,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wcs-yn-dsK" kind="show" identifier="showEventDetail" id="4zG-YS-DD3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,6 +72,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PM-LT-VMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1510" y="-242"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="IR6-ky-Qop">
+            <objects>
+                <viewController id="wcs-yn-dsK" customClass="EventDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sqp-so-rPR"/>
+                        <viewControllerLayoutGuide type="bottom" id="sRh-wl-pHe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pEj-1P-OfS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtK-4m-w4B">
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="introduction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KB-Dy-MgC">
+                                <rect key="frame" x="16" y="105" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="244-rk-obr"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="3MI-zH-FEF"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="7M4-fD-42i"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="BrN-3k-hSd"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="BrX-u9-J0D"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="BzR-97-wcn"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="Mcv-l6-chV"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="MvV-hs-zI2"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="NfB-4f-v3R"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="top" secondItem="sqp-so-rPR" secondAttribute="bottom" constant="8" id="Nnr-t5-WMO"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="Q5c-0D-7c2"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="Ret-Wh-alB"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="UBC-yP-EC9"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="UIQ-QN-ihg"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="top" secondItem="OtK-4m-w4B" secondAttribute="bottom" constant="31" id="Uwr-2J-YgJ"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="a0c-Ig-k1e"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="eC0-We-t5W"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="hx9-hB-5wt"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="jsg-Ps-RE4"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="mpT-Iz-eQZ"/>
+                            <constraint firstItem="3KB-Dy-MgC" firstAttribute="trailing" secondItem="pEj-1P-OfS" secondAttribute="trailingMargin" id="pda-tq-nQz"/>
+                            <constraint firstItem="OtK-4m-w4B" firstAttribute="leading" secondItem="pEj-1P-OfS" secondAttribute="leadingMargin" id="xkT-Fs-p2n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="introductionLabel" destination="3KB-Dy-MgC" id="0J7-0q-lcX"/>
+                        <outlet property="titleLabel" destination="OtK-4m-w4B" id="4yl-NQ-NcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0O-FP-kPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="532"/>
         </scene>
         <!--Events-->
         <scene sceneID="Vrq-im-5mI">

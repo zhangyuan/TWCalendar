@@ -15,6 +15,7 @@
 		27B94D161AC85203004022A6 /* TWCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B94D151AC85203004022A6 /* TWCalendarTests.m */; };
 		27B94D211AC853B3004022A6 /* EventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B94D201AC853B3004022A6 /* EventsTableViewController.m */; };
 		27B94D241AC85703004022A6 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B94D231AC85703004022A6 /* config.plist */; };
+		27B94D271AC85BB0004022A6 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B94D261AC85BB0004022A6 /* EventDetailViewController.m */; };
 		F2D10CCAF19966A0A32C6183 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D166883CA1F86AF7C586BF22 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		27B94D1F1AC853B3004022A6 /* EventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsTableViewController.h; path = Controllers/EventsTableViewController.h; sourceTree = "<group>"; };
 		27B94D201AC853B3004022A6 /* EventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsTableViewController.m; path = Controllers/EventsTableViewController.m; sourceTree = "<group>"; };
 		27B94D231AC85703004022A6 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		27B94D251AC85BB0004022A6 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDetailViewController.h; path = Controllers/EventDetailViewController.h; sourceTree = "<group>"; };
+		27B94D261AC85BB0004022A6 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventDetailViewController.m; path = Controllers/EventDetailViewController.m; sourceTree = "<group>"; };
 		A19247BD613183D7217E9C59 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AF4B34B0FED199BA3C8826C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D166883CA1F86AF7C586BF22 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +145,8 @@
 			children = (
 				27B94D1F1AC853B3004022A6 /* EventsTableViewController.h */,
 				27B94D201AC853B3004022A6 /* EventsTableViewController.m */,
+				27B94D251AC85BB0004022A6 /* EventDetailViewController.h */,
+				27B94D261AC85BB0004022A6 /* EventDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			files = (
 				27B94CFC1AC85203004022A6 /* AppDelegate.m in Sources */,
 				27B94D211AC853B3004022A6 /* EventsTableViewController.m in Sources */,
+				27B94D271AC85BB0004022A6 /* EventDetailViewController.m in Sources */,
 				27B94CF91AC85203004022A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

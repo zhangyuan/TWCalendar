@@ -7,6 +7,7 @@
 //
 
 #import "EventsTableViewController.h"
+#import "EventDetailViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 
 @interface EventsTableViewController ()
@@ -47,6 +48,17 @@
         
         [sender endRefreshing];
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showEventDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        EventDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.event = [self.events objectAtIndex:indexPath.row];
+    }
+    
+    UIViewController* controller = segue.destinationViewController;
+    controller.hidesBottomBarWhenPushed = YES;
 }
 
 
