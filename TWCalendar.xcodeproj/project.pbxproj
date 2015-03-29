@@ -15,6 +15,7 @@
 		27B94D071AC85203004022A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B94D061AC85203004022A6 /* Images.xcassets */; };
 		27B94D0A1AC85203004022A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B94D081AC85203004022A6 /* LaunchScreen.xib */; };
 		27B94D161AC85203004022A6 /* TWCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B94D151AC85203004022A6 /* TWCalendarTests.m */; };
+		27B94D211AC853B3004022A6 /* EventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B94D201AC853B3004022A6 /* EventsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		27B94D0F1AC85203004022A6 /* TWCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B94D141AC85203004022A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B94D151AC85203004022A6 /* TWCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWCalendarTests.m; sourceTree = "<group>"; };
+		27B94D1F1AC853B3004022A6 /* EventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsTableViewController.h; path = Controllers/EventsTableViewController.h; sourceTree = "<group>"; };
+		27B94D201AC853B3004022A6 /* EventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsTableViewController.m; path = Controllers/EventsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 				27B94D061AC85203004022A6 /* Images.xcassets */,
 				27B94D081AC85203004022A6 /* LaunchScreen.xib */,
 				27B94CF61AC85203004022A6 /* Supporting Files */,
+				27B94D221AC853BE004022A6 /* Controllers */,
 			);
 			path = TWCalendar;
 			sourceTree = "<group>";
@@ -122,6 +126,15 @@
 				27B94D141AC85203004022A6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27B94D221AC853BE004022A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27B94D1F1AC853B3004022A6 /* EventsTableViewController.h */,
+				27B94D201AC853B3004022A6 /* EventsTableViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +240,7 @@
 				27B94D021AC85203004022A6 /* SecondViewController.m in Sources */,
 				27B94CFC1AC85203004022A6 /* AppDelegate.m in Sources */,
 				27B94CFF1AC85203004022A6 /* FirstViewController.m in Sources */,
+				27B94D211AC853B3004022A6 /* EventsTableViewController.m in Sources */,
 				27B94CF91AC85203004022A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
